@@ -1,8 +1,12 @@
 //The homepage
 import { getPosts } from '@lib/firebase';
 import styles from '@styles/index.module.scss';
- 
-  const HomePage = ({ posts }) => (
+import { Layout } from '@components';
+import { getFormattedDate } from '@lib/utils';
+
+
+const HomePage = ({ posts }) => (
+  <Layout>
     <div className={styles.HomePage}>
       <h1>Blog Posts</h1>
       {posts.map((post) => (
@@ -21,7 +25,8 @@ import styles from '@styles/index.module.scss';
         </article>
       ))}
     </div>
-  );
+  </Layout>  
+);
 
 //This is for fetching data every time the page is visited. We do this
 // so that we don't have to redploy the site every time we add a blog post.
