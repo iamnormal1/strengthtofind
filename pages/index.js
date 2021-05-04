@@ -15,7 +15,8 @@ import styles from '@styles/index.module.scss';
               dangerouslySetInnerHTML={{
                 __html: `${post.content.substring(0, 200)}...`,
               }}
-            ></p>
+            ></p> 
+            <a href={`/post/${post.slug}`}>Continue Reading</a>
           </div>
         </article>
       ))}
