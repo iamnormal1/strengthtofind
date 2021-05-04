@@ -8,6 +8,7 @@
     nav {
       padding: 24px;
       background-color: #1a73e8;
+      display: flex;
    
       span {
         a {
@@ -19,6 +20,10 @@
           &:hover {
             text-decoration: underline;
           }
+        }
+        button{
+          color: black;
+          background-color: white;
         }
       }
     }
